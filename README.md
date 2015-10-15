@@ -8,31 +8,31 @@ virtualenv
 
 If not already installed, grab a copy from the Cheeseshop:
 
-pip install virtualenv
+<pre>pip install virtualenv</pre>
 
 To set up a virtual environment for your project, use
 
-virtualenv myproject
+<pre>virtualenv myproject</pre>
 
 To join the environment, use (in Bash):
 
-source myproject/bin/activate
+<pre>source myproject/bin/activate</pre>
 
 Django-nonrel
 
-pip install git+https://github.com/django-nonrel/django@nonrel-1.5
+<pre>pip install git+https://github.com/django-nonrel/django@nonrel-1.5</pre>
 
 djangotoolbox
 
-pip install git+https://github.com/django-nonrel/djangotoolbox
+<pre>pip install git+https://github.com/django-nonrel/djangotoolbox</pre>
 
 Django MongoDB Engine
 
 You should use the latest Git revision.
 
-pip install git+https://github.com/django-nonrel/mongodb-engine
+<pre>pip install git+https://github.com/django-nonrel/mongodb-engine</pre>
 
-pip install restframework
+<pre>pip install restframework</pre>
 
 ### Run an app
 
