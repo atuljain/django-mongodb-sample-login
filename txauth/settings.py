@@ -135,11 +135,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'django_mongodb_engine'
-   # 'django-urlcrypt'
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -151,53 +146,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     )
 }
-import ldap 
-from django_auth_ldap.config import LDAPSearch, NestedActiveDirectoryGroupType
 
-# Binding and Connection Options
-
-AUTH_LDAP_SERVER_URL = "ldap://172.22.78.136:389"
-AUTH_LDAP_BIND_DN = "cn=admin, dc=test, dc=com"
-AUTH_LDAPBIND_PASSWORD = "admin"
-AUTH_LDAP_CONNECTION_OPTIONS = {
-    ldap.OPT_DEBUG_LEVEL: 1,
-    ldap.OPT_REFERRALS: 0,
-    }
-# User and groups search objects and types
-
-AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Users,dc=test,dc=com",
-    ldap.SCOPE_SUBTREE, "(sAMAccountName=%(user)s)")
-AUTH_LDAP_GROUP_SEARCH = LDAPSearch("ou=Groups,dc=test,dc=com",
-    ldap.SCOPE_SUBTREE, "(objectClass=group)")
-AUTH_LDAP_GROUP_TYPE = NestedActiveDirectoryGroupType()
-
-# cashe Settings
-AUTH_LDAP_CACHE_GROUPS = True
-AUTH_LDAP_GROUP_CACHE_TIMEOUT = 300
-
-# What to do once the user is authenticated
-AUTH_LDAP_USER_ATTR_MAP = {
-    "first name": "admin"
-    }
-AUTH_LDAP_USER_FLAGS_BY_GROUP = {
-    "is_staff": ["cn=admin,dc=test,dc=com"]
-    
-    }
-AUTH_LDAP_FIND_GROUP_PERMS = True
-# BAckend need to make this work
-AUTHENTICATION_BACKENDS = (
-    'django_auth_ldap.backend.LDAPBackend',
-    'django.contrib.auth.backends.ModelBackend'
-    #'urlcrypt.auth_backends.UrlCryptBackend'
-    )
-
-# db.createUser(
-#     {
-#       user: "atul",
-#       pwd: "atul",
-#       roles: [ { role: "userAdmin", db: "dx_man" } ]
-#     }
-# )
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
