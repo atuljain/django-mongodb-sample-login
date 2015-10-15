@@ -1,0 +1,108 @@
+.omb_login
+{
+	box-shadow: 0 0 6px #999;
+	border-radius: 5px;
+    padding: 0 20px 15px 20px;
+}
+.omb_login .omb_authTitle {
+    text-align: center;
+	line-height: 200%;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+.omb_login .omb_socialButtons
+ {
+ 	min-height: 46px;
+ }
+.omb_login .omb_socialButtons a {
+	color: white; 
+	opacity:0.9;
+	font-size: 1.1em;
+}
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+	opacity:1;    	
+}
+.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
+.omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
+
+.omb_login .omb_loginOr {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	color: #aaa;
+	margin-top: 0.2em;
+	margin-bottom: 1em;
+}
+.omb_login .omb_center
+{
+	width: 40%;
+	position: relative;
+	display: inline-block;
+}
+.omb_login .omb_loginOr .omb_hrOr {
+	background-color: #cdcdcd;
+	height: 1px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.omb_login .omb_loginOr .omb_spanOr {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -0.6em;
+	margin-left: -1.5em;
+	background-color: white;
+	width: 3em;
+	text-align: center;
+}			
+.omb_login .omb_loginForm
+{
+	width: 100%;
+}
+.omb_login .omb_loginForm .input-group.i {
+	width: 2em;
+}
+.omb_login .omb_loginForm  .help-block {
+    color: red;
+}
+.omb_loginForm .form-control
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.checkbox
+{
+	margin-left: 18px;
+}
+.omb_loginForm .omb_forgotPwd
+{
+	margin-top: 10px;
+}
+.omb_loginForm .btn-primary
+{
+	width: 100%;
+	background: #FF873B;
+	padding: 10px 0;
+	border: 1px solid #FC7E2F;
+	transition: all ease-in-out 0.3s;
+}
+.omb_loginForm .btn-primary:hover
+{
+	background: #FA7523;
+}
+.outer{
+	width: 50%;
+	border: 2px;
+}
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+ 	}		
+}
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        
+    }
+}

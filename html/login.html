@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>Atul Jain Sample Login Application with MongoDB</title>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/Style.css">
+	<link rel="stylesheet" href="/static/css/login.css" />
+</head>
+<body>
+	{{redirect_to}}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-5">
+				<div id="loginContainer" class="omb_login">
+					<h3 class="omb_authTitle">Login Form</h3>
+					<form class="omb_loginForm" id="login_form" method="post" action="/login/" autocomplete="off">
+						<input type="hidden" name="redirect_to" id="redirect_to" value="{{redirect_to}}">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-user"></i></span>
+							<input type="text" id="username" class="form-control" name="username" value="{{ username}}" placeholder="Username">
+						</div>
+						<span class="help-block"></span>
+						<div class="clearfix"></div>			
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+							<input type="password" id="passsword" class="form-control" name="passsword" value="" placeholder="Password">
+						</div>
+						<div class="clearfix"></div>
+						<span class="help-block"></span>
+						<input class="btn btn-primary" type="submit" value="Login"/>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+</body>
+</html>
