@@ -38,9 +38,9 @@ You should use the latest Git revision.
 
 ###### *Run Server*
 
-./manage.py syncdb
+<pre>./manage.py syncdb</pre>
 
-./manage.py runserver 
+<pre>./manage.py runserver </pre>
 
 You can see the port number in command prompt after sucessfull run
 
